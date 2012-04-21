@@ -71,6 +71,7 @@ if ($env['ext'] != 'admin')
 
 		if ($bbenable && (!COT_AJAX || cot_import('bbtab', 'G', 'TXT') == $tab))
 		{
+			$bbcatwhere = '';
 			$t1 = new XTemplate(cot_tplfile(array('customnews', $tab), 'plug'));
 			if (!empty($tabinfo['cat']) && $tabinfo['cat'] != 'incat' && isset($structure['page'][$tabinfo['cat']]))
 			{

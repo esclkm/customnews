@@ -60,7 +60,7 @@ if ($env['ext'] != 'admin')
 		{
 			$bbenable = true;
 		}
-		elseif ($tabinfo['part'] == 'index' && $env['ext'] == 'index')
+		elseif ($tabinfo['part'] == 'index' && $env['location'] == 'home')
 		{
 			$bbenable = true;
 		}		

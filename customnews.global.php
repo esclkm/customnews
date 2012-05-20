@@ -48,7 +48,7 @@ if (!$customnewstabs)
 //end customnews Tabs List
 if ($env['ext'] != 'admin')
 {
-	
+//	cot_print($env);
 	foreach ($customnewstabs as $tab => $tabinfo)
 	{
 		$bbenable = false;
@@ -56,11 +56,11 @@ if ($env['ext'] != 'admin')
 		{
 			$bbenable = true;
 		}
-		elseif ($tabinfo['part'] == 'ajax' && defined('COT_AJAX'))
+		elseif ($tabinfo['part'] == 'ajax' && defined('COT_AJAX') && COT_AJAX == 1)
 		{
 			$bbenable = true;
 		}
-		elseif ($tabinfo['part'] == 'index' && $env['location'] == 'home')
+		elseif ($tabinfo['part'] == 'index' && empty($_GET['e']) && COT_AJAX !=1)
 		{
 			$bbenable = true;
 		}		

@@ -5,8 +5,8 @@
 Code=customnews
 Name=customnews Addon
 Description=customnews Addon
-Version=3.00
-Date=20-Dec-2011
+Version=4.00
+Date=20-Jule-2012
 Author=esclkm littledev.ru
 Copyright=&copy 2011 esclkm littledev.ru
 Notes=

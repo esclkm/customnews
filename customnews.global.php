@@ -10,7 +10,7 @@
 /**
  * customnews for Cotonti CMF
  *
- * @version 3.00
+ * @version 4.00
  * @author esclkm littledev.ru
  * @copyright (с) 2011 esclkm littledev.ru
  */
@@ -85,6 +85,8 @@ if ($env['ext'] != 'admin')
 				$customnewscats = cot_structure_children($bbcat);
 				$bbcatwhere = (count($customnewscats)) ? " AND page_cat IN ('".implode("', '", $customnewscats)."')" : '';
 			}
+			$tabinfo['where'] = str_replace('{$sys_now}', $sys['now'], $tabinfo['where']);
+			
 			$bbsql = $db->query("SELECT * FROM $db_pages 
 			WHERE page_state='0' $bbcatwhere {$tabinfo['where']} 
 			ORDER BY {$tabinfo['order']} LIMIT {$tabinfo['count']}");

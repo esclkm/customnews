@@ -24,4 +24,14 @@ $L['cfg_tabs'] = array('Конфигуратор шаблонов','1|2|3|4|5|6<
 	Для Использования произвольных шаблонов, необходимо создать файл формата customnews.code.tpl');
 $L['cfg_count'] = array('Количество элементов по умолчанию');
 
+$L['Where'] = 'Where query';
+$L['Order'] = 'ORDER BY';
+$L['incat'] = 'In current category';
+$L['Template']='Template';
+$L['Code_help']='Identifier of news block';
+$L['Order_help']='Sorting, by default: page_date DESC';
+$L['Where_help']='Additional filter, where {$sys_now} - current time';
+$L['Part_help']='Location (all / ajax / page / index / $_GET[\'e\']), for save sql queries';
+
+$L['Newscat_exists']='This code empty or currently exists. Please change the code';
 ?>

@@ -82,7 +82,7 @@ if ($env['ext'] != 'admin')
 			elseif ($tabinfo['cat'] == 'incat' && $_GET['e'] == 'page' && (isset($structure['page'][$_GET['c']]) || $structure['page'][$pag['page_cat']]))
 			{
 				$bbcat = (isset($structure['page'][$_GET['c']])) ? $_GET['c'] : $structure['page'][$pag['page_cat']];
-				$customnewscats = cot_structure_children($bbcat);
+				$customnewscats = cot_structure_children('page', $bbcat);
 				$bbcatwhere = (count($customnewscats)) ? " AND page_cat IN ('".implode("', '", $customnewscats)."')" : '';
 			}
 			$tabinfo['where'] = str_replace('{$sys_now}', $sys['now'], $tabinfo['where']);

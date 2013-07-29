@@ -45,7 +45,7 @@ if ($p == 'customnews' && $config_name == 'tabs' && $cfg['jquery'])
 	}
 
 	$tt->assign(array(
-		'MAINCATEGORY' => cot_selectbox_categories($index, 'newsmaincat'),
+		'MAINCATEGORY' => cot_selectbox_structure('page', $index, 'newsmaincat'),
 		'CATNUM' => $jj
 	));
 	$tt->parse('MAIN');
